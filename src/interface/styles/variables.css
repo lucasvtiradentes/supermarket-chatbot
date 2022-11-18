@@ -1,0 +1,29 @@
+:root {
+
+   --borderFormEls: hsl(0, 0%, 10%);
+   --bgFormEls: hsl(0, 0%, 14%);
+   --bgFormElsFocus: hsl(0, 7%, 20%);
+
+   /* --menu-color: black; */
+   /* --background-color: white; */
+   /* --font-color: black; */
+   /* --border-color: black; */
+
+   /* --menu-color: black; */
+   /* --background-color: rgb(3, 7, 59); */
+   /* --font-color: white; */
+   /* --border-color: white; */
+
+   /* --menu-color: rgb(36,75,215); */
+   --menu-color: rgb(3, 7, 59);
+   --background-color: rgb(211,204,189);
+   --font-color: black;
+   --border-color: black;
+
+   --color-message-indication: rgb(24, 182, 255);
+   --menu-icons-color: white;
+   --bot-icon-color: white;
+   --status-icons-color: white;
+   
+
+}

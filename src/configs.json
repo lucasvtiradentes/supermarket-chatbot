@@ -1,0 +1,18 @@
+{
+   "app_title": "Market Chatbot",
+   "app_width": 800,
+   "app_height": 700,
+   "app_sending_messages_color": "green",
+   "app_searching_for_messages_color": "rgb(30, 155, 204)",
+   "app_turning_off_attemp_color": "red",
+   "app_turning_on_attemp_color": "yellow",
+   "timeUnitlCheckMessagesAgain": 3,
+
+   "productNameColumn": 1,
+   "bulkColumn": 2,
+   "initialQuantityColumn": 3,
+   "initialPriceColumn": 4,
+   "finalQuantityColumn": 5,
+   "finalPriceColumn": 6,
+   "occurrenceColumn": 10
+}

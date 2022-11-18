@@ -1,0 +1,172 @@
+/* ========================================================================== */
+
+.config-page {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+   padding: 5px;
+   align-self: center;
+   justify-self: center;
+   width: 95%;
+   height: 90%;
+   /* border: 1px solid green; */
+}
+
+/* ========================================================================== */
+
+.config-column {
+   border: 1px solid var(--border-color);
+   text-align: center;
+   padding: 10px 20px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   /* border-radius: 15px; */
+}
+
+/* ========================================================================== */
+
+.property {
+   border: 1px solid var(--border-color);
+   border-radius: 15px;
+   padding-top: 20px 0;
+   padding: 0 2px;
+   margin: 0 auto;
+   /* margin-top: 40px; */
+   width: 100%;
+   /* height: 45px; */
+   display: grid;
+   grid-template-rows: 1fr;
+   align-items: center;
+   /* align-content: center; */
+   /* justify-content: center; */
+   /* justify-items: center; */
+}
+
+.single {
+   /* color: blue; */
+   /* border: 1px solid red; */
+   /* margin: auto; */
+   display: grid;
+   grid-template-columns: 1fr;
+}
+
+.double {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+   /* border: 1px solid blue; */
+}
+
+.switch {
+   display: grid;
+   grid-template-columns: 0.5fr 1.5fr;
+   /* border: 1px solid purple; */
+   margin: 10px auto;
+}
+
+.switch-label {
+
+   text-align: left;
+   margin-left: 5px;
+}
+.cell {
+   /* border: 1px solid white; */
+   margin: auto;
+   /*  0px */
+}
+
+.first-property {
+   margin-top: 20px;
+}
+
+.margin-top {
+   margin-top: 40px;
+}
+
+/* ========================================================================== */
+
+input {
+   display: block;
+   /* width: 100%; */
+   height: 10px;
+   /* border-radius: 10px; */
+   /* padding: 10px; */
+}
+
+/* ========================================================================== */
+
+.input-field {
+   display: inline-block;
+   position: relative;
+   width: 100%;
+   margin: 15px 0;
+}
+
+/* // .input-field */
+
+label.property-title {
+   position: absolute;
+   left: 0px;
+   top: -35px;
+   /* font-size: 12px; */
+   /* color: #2196F3; */
+   font-weight: bold;
+}
+
+/* ========================================================================== */
+
+input, select, textarea, button {
+   font-family: inherit;
+   font-size: 100%;
+}
+
+select {
+   appearance: none;
+}
+
+select::-ms-expand {
+   display: none;
+}
+
+select:-moz-focusring {
+   color: transparent !important;
+   text-shadow: 0 0 0 white;
+}
+
+/* ========================================================================== */
+
+select, input, textarea, button {
+   width: 97%;
+   /* padding: 5px 0; */
+   height: 30px;
+   border: 1px solid var(--borderFormEls);
+   color: white;
+   background: var(--bgFormEls);
+   transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25), transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.config-page select:focus, .config-page input:focus, .config-page textarea:focus, .config-page button:enabled:hover, .config-page button:focus, .config-page input[type="checkbox"]:focus+label {
+   background: var(--bgFormElsFocus);
+}
+
+.config-page select:focus, .config-page input:focus, .config-page textarea:focus {
+   transform: scale(1.02);
+}
+
+.config-page *:required, .config-page select {
+   background-repeat: no-repeat;
+   background-position: center right 12px;
+   background-size: 15px 15px;
+}
+
+*:disabled {
+   cursor: not-allowed;
+   /* filter: blur(0.75px); */
+}
+
+input:focus, textarea:focus {
+   outline: none;
+}
+
+input:focus~.bar:before, textarea:focus~.bar:before {
+   width: 320px;
+}

@@ -1,0 +1,57 @@
+{
+  "name": "supermarket-chatbot",
+  "version": "0.0.1",
+  "description": "🛒 an auto-updatable elctron whatsapp chatbot made for sending supermarket customers warning and informative messages whenever needed.",
+  "license": "MIT",
+  "author": {
+    "name" : "Lucas Vieira",
+    "email" : "lucasvtiradentes@gmail.com"
+  },
+  "homepage": "https://github.com/lucasvtiradentes/supermarket-chatbot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasvtiradentes/supermarket-chatbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasvtiradentes/supermarket-chatbot/issues"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "electron src/index.js",
+    "build": "electron-builder",
+    "publish": "electron-builder -p always",
+    "pack": "electron-builder --dir"
+  },
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "dotenv": "^8.2.0",
+    "electron-is-dev": "^1.2.0",
+    "electron-store": "^5.2.0",
+    "electron-updater": "^4.3.1",
+    "http2": "^3.3.7",
+    "mongodb": "^3.5.9"
+  },
+  "devDependencies": {
+    "electron": "^9.0.5",
+    "electron-builder": "^22.7.0",
+    "eslint": "^7.5.0"
+  },
+  "build": {
+    "appId": "market-chatbot-desktop-app",
+    "win": {
+      "target": [ "nsis" ],
+      "icon": "src/interface/images/Icon.png"
+    },
+    "nsis": {
+      "uninstallDisplayName": "Market chatbot",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "publish": {
+      "provider": "s3",
+      "bucket": "super-chatbot",
+      "region": "sa-east-1"
+    },
+    "asar": true
+  }
+}

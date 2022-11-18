@@ -1,0 +1,105 @@
+{
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  // "extends": "standard",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    // NOT ALLOWED =========================================================
+    "no-trailing-spaces": "error", // Não permitir espaços em brancos no final da linha
+    "no-useless-escape": "error",
+    "no-multi-spaces": "error",
+    "space-in-parens": [
+      "error",
+      "never"
+    ],
+    // STYLE ===============================================================
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "space-infix-ops": [
+      "error"
+    ],
+    // "camelcase": "error",
+    // "indent": ["error", 3],
+    // LOGIC STATMENTS =====================================================
+    "yoda": "error",
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
+    // VARIABLES ===========================================================
+    // "no-unused-vars": "error",
+    "no-redeclare": "error",
+    // BLOCKS ==============================================================
+    // "block-spacing": "error",
+    "space-before-blocks": [
+      "error",
+      "always"
+    ], // ESPAÇO ANTES DE ABRIR O OBJETO DO BLOCO => block() { }
+    // "padded-blocks": ["error", "always"],                                // USAR UMA LINHA EM BRANCO ANTES DE UM BLOCO SER INSTANCIADO
+    "no-unreachable": "error",
+    // KEYSWORDS ===========================================================
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    // OBJECTS =============================================================
+    "comma-style": [
+      "error",
+      "last"
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "singleLine": {
+          "beforeColon": false,
+          "afterColon": true
+        },
+        "multiLine": {
+          "beforeColon": false,
+          "afterColon": true
+        },
+        "align": {
+          "beforeColon": true,
+          "afterColon": true,
+          "on": "colon"
+        }
+      }
+    ],
+    // CLASSES =============================================================
+    "new-parens": "error",
+    // FUNCTIONS ===========================================================
+    "func-call-spacing": [
+      "error",
+      "never"
+    ],
+    "space-before-function-paren": [
+      "error",
+      "never"
+    ]
+  }
+}

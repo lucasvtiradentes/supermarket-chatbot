@@ -1,0 +1,194 @@
+/* ################################################################################################################################# */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+/* ################################################################################################################################# */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ################################################################################################################################# */
+
+.menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 10%;
+  /* padding: %; */
+  background-color: var(--menu-color);
+  display: grid;
+  grid-template-rows: 0.1fr 0.8fr 0.1fr;
+  grid-gap: 5px;
+}
+
+/* ################################################################################################################################# */
+
+.currentTaskBot {
+  margin: auto auto;
+}
+.currentTaskBot a { 
+  color: var(--bot-icon-color);
+} 
+
+.currentTaskBot a i {
+  font-size: 32px;
+}
+
+/* ################################################################################################################################# */
+
+.navbar {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar i {
+  font-size: 32px;
+}
+
+.navbar a {
+  margin: 30px 0;
+}
+
+.navbar a {
+  transition: all .5s ease-out;
+  color: var(--menu-icons-color);
+}
+
+.navbar a:hover {
+  opacity: 0.5;
+}
+
+/* ################################################################################################################################# */
+
+.statusFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  
+  margin: auto auto;
+  color: (--status-icons-color);
+}
+
+.statusFields i {
+  font-size: 12px;
+}
+
+/* ################################################################################################################################# */
+
+#p1 {
+  width: 100%;
+  background: var(--background-color);
+  left: 0;
+}
+
+#p2 {
+  background: var(--background-color);
+}
+
+#p3 {
+  background: var(--background-color);
+}
+
+#p4 {
+  background: var(--background-color);
+}
+
+#p5 {
+  background: var(--background-color);
+}
+
+#p2, #p3, #p4, #p5 {
+  width: 90%;
+  left: 10%;
+  transform: translateX(190%);
+}
+
+/* ################################################################################################################################# */
+
+.page {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page {
+  font-family: 'Barlow', sans-serif;
+  color: var(--font-color);
+}
+
+.page {
+  transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+}
+
+.page .wrap {
+  /* width: 90%; */
+  transform: translateX(200%);
+  transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+}
+
+.page#p1 .wrap {
+  transform: translateX(0%);
+}
+
+/* ################################################################################################################################# */
+
+#t2:target .page#p2 .wrap, 
+#t3:target .page#p3 .wrap, 
+#t4:target .page#p4 .wrap, 
+#t5:target .page#p5 .wrap {
+  transform: translateX(0);
+  transition-delay: 1s;
+}
+
+#t2:target #p2, 
+#t3:target #p3, 
+#t4:target #p4, 
+#t5:target #p5 {
+  transform: translateX(0%);
+  transition-delay: .4s !important;
+}
+
+#t2:target #p1, 
+#t3:target #p1, 
+#t4:target #p1, 
+#t5:target #p1 {
+  background: black;
+  filter: blur(3px)
+}
+
+#t2:target .menu a, 
+#t3:target .menu a, 
+#t4:target .menu a, 
+#t5:target .menu a {
+  transform: scale(.6);
+  transition-delay: .25s;
+}
+
+#t2:target .menu .two, 
+#t3:target .menu .three, 
+#t4:target .menu .four,
+#t5:target .menu .five {
+    transform: scale(1.2);
+}
+
+/* ################################################################################################################################# */

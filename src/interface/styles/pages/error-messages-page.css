@@ -1,0 +1,33 @@
+.error-messages-page {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-gap: 10px;
+   padding: 5px;
+   align-self: center;
+   justify-self: center;
+   width: 95%;
+   height: 90%;
+   border: 1px solid var(--border-color);
+}
+
+.page-title {
+   font-weight: bolder;
+   font-size: 20px;
+   color: var(--menu-color);
+   margin: 10px 0;
+}
+
+.table-row-options {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 2px;
+}
+
+.table-row-options > i {
+   font-size: 15px;
+}
+
+.action-icon:hover {
+   color: red;
+}
+
