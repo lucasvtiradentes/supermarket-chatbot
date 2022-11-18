@@ -1,0 +1,8 @@
+# FOLDERS ###########################
+node_modules/
+dist/
+
+# FILES #############################
+.env
+package-lock.json
+pnpm-lock.yaml

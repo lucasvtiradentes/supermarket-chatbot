@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+   <!-- ########################################################################################################################### -->
+
+   <head> <!-- ===================================================================================================== -->
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <link rel="stylesheet" href="./styles/variables.css">
+      <link rel="stylesheet" href="./styles/app-interface.css">
+      <link rel="stylesheet" href="./styles/pages/home-page.css">
+      <link rel="stylesheet" href="./styles/pages/dashboard-page.css">
+      <link rel="stylesheet" href="./styles/pages/error-messages-page.css">
+      <link rel="stylesheet" href="./styles/pages/config-page.css">
+      <link rel="stylesheet" href="./styles/pages/chat-page.css">
+      <link rel="stylesheet" href="./styles/elements/toggle-switch.css">
+      <link rel="stylesheet" href="./styles/elements/general.css">
+
+      <script defer src="./scripts/variables.js"></script>
+      <script defer src="./scripts/interfaceListenEvents.js"></script>
+
+      <script defer src="./scripts/incorporatedFunctions/setUpFieldChanges.js"></script>
+      <script defer src="./scripts/incorporatedFunctions/setOrGetSettings.js"></script>
+      <script defer src="./scripts/incorporatedFunctions/canChangeSettings.js"></script>
+      <script defer src="./scripts/incorporatedFunctions/canInitChatbot.js"></script>
+      
+      <script defer src="./scripts/incorporatedFunctions/whenChatbotCheckboxChange.js"></script>
+
+      <script defer src="./scripts/runOnLoad.js"></script>
+
+   </head> <!-- ==================================================================================================== -->
+
+
+   <!-- ########################################################################################################################### -->
+
+   <body> <!-- ===================================================================================================== -->
+
+   <div class="indicator"> <!-- -------------------------------------------- -->
+
+   </div>
+
+   <div id="t1"> <!--  ----------------------------------------------------- -->
+      <div id="t2">
+         <div id="t3">
+            <div id="t4">
+               <div id="t5">
+
+                  <!-- -------------------------------------------------------- -->
+
+                  <div class="menu">
+
+                     <div class="currentTaskBot">
+                        
+                        <a href="#t1" id="homeIcon" class="container one">
+                           <!-- <i class="fas fa-home"></i> -->
+                           <i id="botIcon" class="fas fa-robot"></i>
+                        </a>  
+                     </div>
+
+                     <div class="navbar">
+   
+                        <a href="#t2" id="dashboardIcon" class="container two">
+                           <i class="far fa-chart-bar"></i>
+                        </a>   
+   
+                        <a href="#t3" id="erroMessagesIcon" class="container three">
+                           <!-- <i class="fas fa-list"></i> -->
+                           <i class="fas fa-times"></i>
+                           <div class="bottom-right" id="errorMessages" ></div>
+                        </a>   
+   
+                        <a href="#t4" id="settingsIcon" class="container four">
+                           <i class="fas fa-cogs"></i>
+                        </a>        
+   
+                        <a href="#t5" class="container five">
+                           <i class="fab fa-whatsapp" id="whatsappIcon"></i>
+                           <div class="bottom-right" id="pendingMessages"></div>
+                        </a>    
+   
+                     </div>
+
+                     <div class="statusFields">
+                        <div id="internetStatus" class="statusField">
+                           <i class="fas fa-wifi"></i>
+                        </div>
+                        <div id="databaseStatus" class="statusField">
+                           <i class="fas fa-database"></i>
+                        </div>
+                        <div id="settingsStatus" class="statusField">
+                           <i class="fas fa-cogs"></i>
+                        </div>
+                     </div>
+   
+                  </div>
+
+                  <!-- -------------------------------------------------------- -->
+
+                  <div class="page" id="p1">
+                     <div class="wrap">
+                        <div class="home-page">
+                           <img id="img-super" src="./images/Super.png" alt="APP SUPER">
+                           <h1 id="pageCenterText"></h1>
+                           <h3 id="currentTask"></h3>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- -------------------------------------------------------- -->
+
+                  <div class="page" id="p2">
+                     <div class="wrap dashboard-page">
+
+                        <div class="dashboard-row">
+
+                           <div class='dashboard-item'>
+                              <div id="totalMessagesChartTitle" class="dashboard-item-title">Mensagens totais</div>
+                              <canvas id="totalMessagesChart" class="chart"></canvas>
+                           </div>
+
+                           <div class='dashboard-item'>
+                              <div  id="sentMessagesChartTitle" class="dashboard-item-title">Mensagens enviadas</div>
+                              <canvas id="sentMessagesChart" class="chart"></canvas>
+                           </div>
+
+                        </div>
+
+                        <div class="dashboard-row-table">
+
+                           <div class='dashboard-item-table'>
+                              <div class="dashboard-item-title">Mensagens recentes</div>
+                              <div id="lastSentMessagestable" class="table-container">
+                                 <!-- table goes here -->
+                              </div>
+                           </div>
+
+                        </div>
+
+                     </div>
+                  </div>
+
+                  <!-- -------------------------------------------------------- -->
+                  
+                  <div class="page" id="p3">
+                     <div class="wrap chat-page">
+                        <div>
+                           <div class="page-title">Clientes para serem avisados manualmente</div>
+                           <div id="errorMessagesTable" class="table-container">
+                              <!-- table goes here -->
+                           </div>      
+                        </div>
+
+                     </div>
+                  </div>
+
+                  <!-- -------------------------------------------------------- -->
+
+                  <div class="page" id="p4">
+                     <div class="wrap config-page">
+
+                        <!-- --------------------------------------------------------------------------------------------------------- -->
+
+                        <div class="config-column">
+
+                           
+                           <div class="property first-property">
+                              <div class="input-field">
+                                 <label class="property-title">Nome do mercado</label>
+                                 <input class="value cell" type="text" id="marketName" name="marketName">
+                                 <!-- disabled -->
+                              </div>
+                           </div>
+                           
+                           <div class="property margin-top">
+                              <div class="input-field">
+                                 <label class="property-title">Chave do mercado</label>
+                                 <input class="value cell" type="text" id="chatbotKey" name="chatbotKey">
+                              </div>
+                           </div>
+
+                           <div class="property margin-top">
+                              <div class="input-field">
+                                 <label class="property-title">Hora fechamento do mercado</label>
+                                 <input class="value cell" type="time" id="marketClosingTime" name="marketClosingTime">
+                                 <!-- disabled -->
+                              </div>
+                           </div>
+
+                           <div class="property margin-top">
+                              <div class="input-field">
+                                 <label class="property-title">Hora limete para entregas no mesmo dia</label>
+                                 <input class="value cell" type="time" id="marketSameDayDeliveryTime" name="marketClosingTime">
+                                 <!-- disabled -->
+                              </div>
+                           </div>
+
+                        </div>
+
+                        <!-- --------------------------------------------------------------------------------------------------------- -->
+
+                        <div class="config-column">
+
+                           <div class="property first-property">
+                              <div class="input-field">
+                                 <label class="property-title">Dia analisado</label>
+                                 <select id="analysedDate">
+                                    <option selected disabled>-- Selecione o dia analisado --</option>
+                                    <option>Hoje</option>
+                                    <option>Ontem e hoje</option>
+                                    <option>Todos os dias</option>
+                                 </select>
+                              </div>
+                           </div>
+
+                           <div class="property margin-top">
+                              <div class="input-field">
+                                 <label class="property-title">Destino das mensagens</label>
+                                 <select id="messagesDestination">
+                                    <option selected disabled>-- Selecione o destino das mensagens --</option>
+                                    <option>Clientes</option>
+                                    <option>Número de testes</option>
+                                 </select>
+                              </div>
+                           </div>
+
+                           <div class="property margin-top">
+                              <div class="input-field">
+                                 <label class="property-title">Número de testes</label>
+                                 <input type="text" id="testCellPhone" name="testCellPhone">
+                                 <!-- disabled -->
+                              </div>
+                           </div>
+                           
+                           <div class="property margin-top">
+                              <div class="input-field">
+                                 <label class="property-title">Gráfico de mensagens enviadas</label>
+                                 <select id="chartsData">
+                                    <option selected disabled>-- Selecione o conteúdo do gráfico --</option>
+                                    <option>Hoje</option>
+                                    <option>Todos os dias</option>
+                                 </select>
+                              </div>
+                           </div>
+                           
+                           <div class="property margin-top">
+                              <div class="input-field">
+                                 <label class="property-title">Opções</label>
+
+                                 <div class="switch">
+                                    <div class="onoffswitch cell">
+                                       <input type="checkbox" name="activateChatbot" class="onoffswitch-checkbox" id="activateChatbot" tabindex="0">
+                                       <label class="onoffswitch-label" for="activateChatbot">
+                                          <span class="onoffswitch-inner"></span>
+                                          <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                    <div class="switch-label">Ativar operações do bot</div>
+                                 </div>
+
+                                 <div class="switch">
+                                    <div class="onoffswitch cell">
+                                       <input type="checkbox" name="searchForUpdates" class="onoffswitch-checkbox" id="searchForUpdates" tabindex="0">
+                                       <label class="onoffswitch-label" for="searchForUpdates">
+                                          <span class="onoffswitch-inner"></span>
+                                          <span class="onoffswitch-switch"></span>
+                                       </label>
+                                    </div>
+                                    <div class="switch-label">Atualizar automaticamente</div>
+                                 </div>
+
+                              </div>
+
+                           </div>
+
+                        </div>
+                        <!-- --------------------------------------------------------------------------------------------------------- -->
+                     </div>
+                  </div>
+
+                  <!-- -------------------------------------------------------- -->
+
+                  <div class="page" id="p5">
+                     <div class="wrap chat-page">
+                        <webview id="myweb" src="https://web.whatsapp.com/" preload="./web-view/whatsappListenEvents.js" nodeintegration></webview>
+                     </div>
+                  </div>
+
+                  <!-- -------------------------------------------------------- -->
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      // without this, webview scripts will not run successfully
+   </script>
+   </body> <!-- ==================================================================================================== -->
+
+   <!-- ########################################################################################################################### -->
+
+</html>

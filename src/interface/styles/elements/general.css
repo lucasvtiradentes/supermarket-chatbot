@@ -1,0 +1,51 @@
+/* ################################################################################################################################# */
+
+.container {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bottom-right {
+  color: var(--color-message-indication);
+  font-size: 20px;
+  position: absolute;
+  bottom: -10%;
+  left: 70%;
+  font-weight: bold;
+  /* transform: translate(65%, 0%); */
+}
+
+/* ################################################################################################################################# */
+
+.table-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead>tr {
+  background-color: black;
+  border: 1px solid var(--border-color);
+  color: white;
+}
+
+tbody>tr {
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
+}
+
+tbody>tr:hover {
+  background-color: var(--menu-color);
+  color: white;
+}
+
+tr:nth-child(even) {
+  opacity: grey;
+}
+
+/* ################################################################################################################################# */

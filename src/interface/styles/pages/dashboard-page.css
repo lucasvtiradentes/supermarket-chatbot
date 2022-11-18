@@ -1,0 +1,58 @@
+/* ################################################################################################################################# */
+
+.dashboard-page {
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   grid-gap: 10px;
+   padding: 5px;
+   align-self: center;
+   justify-self: center;
+   width: 95%;
+   height: 90%;
+   /* background-color: red; */
+}
+
+/* ################################################################################################################################# */
+
+.dashboard-row {
+   /* border: 1px solid white; */
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.dashboard-row-table {
+   /* border: 1px solid white; */
+   display: grid;
+   grid-template-columns: 1fr;
+}
+
+/* ################################################################################################################################# */
+
+.dashboard-item-title {
+   font-weight: bolder;
+   font-size: 20px;
+   color: var(--menu-color);
+   margin: 10px 0;
+}
+
+.dashboard-item {
+   border: 1px solid var(--border-color);
+   margin: 10px auto;
+   padding: 5px;
+   width: 90%;
+}
+
+.dashboard-item-table {
+   border: 1px solid var(--border-color);
+   margin: 10px auto;
+   padding: 5px;
+   width: 95%;
+}
+
+/* ################################################################################################################################# */
+
+canvas {
+   width: 100% !important;
+}
+
+/* ################################################################################################################################# */
